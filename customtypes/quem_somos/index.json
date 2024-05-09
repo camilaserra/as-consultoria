@@ -1,0 +1,51 @@
+{
+  "format": "custom",
+  "id": "quem_somos",
+  "label": "Quem somos",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "titulo": {
+        "type": "Text",
+        "config": {
+          "label": "Título",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "subtitulo": {
+        "type": "Text",
+        "config": {
+          "label": "Subtitulo",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "conteudo_esquerdo": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Conteudo esquerdo",
+          "placeholder": "Digite aqui!",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink"
+        }
+      },
+      "imagem": {
+        "type": "Image",
+        "config": {
+          "label": "Imagem",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "conteudo_direito": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Conteudo direito",
+          "placeholder": "Digite aqui!",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink"
+        }
+      }
+    }
+  }
+}

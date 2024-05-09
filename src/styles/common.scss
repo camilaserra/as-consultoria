@@ -1,7 +1,7 @@
 // estilos globais
 .main_container {
   width: 100%;
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
   @media (max-width: 1199.98px) {
     max-width: 920px;
@@ -27,6 +27,19 @@
 
 body {
   @apply min-h-[100vh];
+
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #4F2877;
+    outline: none;
+  }
 }
 
 html {

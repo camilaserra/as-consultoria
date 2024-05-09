@@ -119,7 +119,7 @@ export function ExampleForm() {
           name={'nascimento'}
           label={'Data de Nascimento'}
         />
-        <Button variant="primaryGreen" type="submit">
+        <Button variant="outlinedBlack" type="submit">
           Enviar
         </Button>
       </form>

@@ -42,7 +42,7 @@ export function FileInputLite({
             setFile(e.target.files)
           }}
         />
-        <Icon icon='ph:camera-fill' className='text-4xl text-brand-blue absolute right-2
+        <Icon icon='ph:camera-fill' className='text-4xl text-pink-200 absolute right-2
         top-1/2 transform -translate-y-1/2'/>
 
       </label>

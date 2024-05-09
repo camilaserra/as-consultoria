@@ -32,7 +32,7 @@ export function MenuHamburguer() {
             <img src="/img/logo.png" alt="bredi" />
           </div>
           {navLinks.map((link) => {
-            if (link.submenu) {
+            /* if (link.submenu) {
               return (
                 <div key={link.name} className="text-2xl cursor-pointer text-zinc-900 bg-white p-5 border-b border-brand-yellow">
                   <div>{link.name}</div>
@@ -50,7 +50,7 @@ export function MenuHamburguer() {
                 </div>
               )
             }
-            else
+            else */
               return (
                 <div
                   key={link.name}
@@ -72,7 +72,7 @@ export function MenuHamburguer() {
             <p className="text-zinc-900 text-center text-xl flex justify-center items-center">
               <Icon
                 icon="mdi:whatsapp"
-                className="text-brand-yellow mr-2 text-xl"
+                className="text-yellow-300 mr-2 text-xl"
               />{' '}
               (99) 9999-9999
             </p>

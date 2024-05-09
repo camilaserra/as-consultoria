@@ -10,20 +10,16 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          pink: "#CC20FF",
-          violet: "#6401B4",
-          green: "#00AEA4",
-          gray: {
-            50: "#949494",
-          },
-          blue: {
-            50: '#F6F7FF',
-          },
           purple: {
-            600: '#5F69E2'
+            100: '#F4D4F9',
+            200: '#9553A0',
+            300: '#814E9B',
+            400: '#4F2877',
+            500: '#4C336A',
+            600: '#00000017',
           },
-          yellow: {
-            100: "#DACE00"
+          gray: {
+            100: '#F5F5F5',
           },
         },
       },

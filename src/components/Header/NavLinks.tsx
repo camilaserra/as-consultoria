@@ -6,27 +6,40 @@ import { DropdownHover } from './DropdownHover'
 
 export const navLinks = [
   {
-    route: '/',
-    name: 'Home',
+    route: '/#quem-somos',
+    name: 'Quem Somos',
   },
   {
-    route: '/sobre-nos',
-    name: 'Sobre Nós',
+    route: '/#estrutura',
+    name: 'Estrutura',
   },
   {
+    route: '/#valores',
+    name: 'Valores',
+  },
+  {
+    route: '/#porque-contratar',
+    name: 'Porque Contratar?',
+  },
+  {
+    route: '/#a-ceo',
+    name: 'A CEO',
+  },
+  {
+    route: '/#invista',
+    name: 'Invista',
+  },
+/*   {
     route: '/blog',
     name: 'Blog',
   },
-  {
-    route: '/contatos',
-    name: 'Contatos',
-  },
+ 
   {
     route: '/servicos',
     name: 'Serviços',
     dinamic_submenu_document_type: 'servico', // your document needs to have a field called "titulo"
-  },
-  {
+  }, */
+  /* {
     route: '/submenu',
     name: 'Submenu',
     submenu: [
@@ -39,7 +52,7 @@ export const navLinks = [
         href: '/submenu/submenu2',
       }
     ]
-  },
+  }, */
 ]
 
 export default function NavLinks() {
@@ -48,7 +61,7 @@ export default function NavLinks() {
   return (
     <>
       {navLinks?.map((link) => {
-        if (link.dinamic_submenu_document_type) {
+       /*  if (link.dinamic_submenu_document_type) {
           return (
             <DropdownHover
               key={link.name}
@@ -58,8 +71,8 @@ export default function NavLinks() {
               dinamic_submenu_document_type={link.dinamic_submenu_document_type}
             />
           )
-        }
-        if (link.submenu) {
+        } */
+      /*   if (link.submenu) {
           return (
             <DropdownHover
               key={link.name}
@@ -68,19 +81,13 @@ export default function NavLinks() {
               links={link.submenu}
             />
           )
-        }
+        } */
         return (
           <Link key={link.name} href={link.route}>
-            <span className={`${segment === link.route.replace("/", "") ? "font-bold" : "font-normal"} hover:opacity-70 text-white cursor-pointer`}>{link.name}</span>
+            <span className={`${segment === link.route.replace("/", "") ? "font-bold" : "font-light"} hover:opacity-70 text-white uppercase cursor-pointer`}>{link.name}</span>
           </Link>
         )
       })}
-      <a href="/" rel="noreferrer" target="_blank">
-        <Icon icon="mdi:facebook" className="text-white" />
-      </a>
-      <a href="/" rel="noreferrer" target="_blank">
-        <Icon icon="mdi:instagram" className="text-white" />
-      </a>
     </>
   )
 }

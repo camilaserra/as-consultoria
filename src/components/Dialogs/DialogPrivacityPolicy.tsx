@@ -43,7 +43,7 @@ export default function DialogPrivacityPolicy() {
               onClick={() => {
                 setOpen(false)
               }}
-              variant='secondary'
+              variant='outlinedBlack'
             >
               Rejeitar
             </Button>

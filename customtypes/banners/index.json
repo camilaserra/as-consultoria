@@ -1,0 +1,42 @@
+{
+  "format": "custom",
+  "id": "banners",
+  "label": "banners",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "banners": {
+        "type": "Group",
+        "config": {
+          "label": "banners",
+          "repeat": true,
+          "fields": {
+            "imagem": {
+              "type": "Image",
+              "config": {
+                "label": "imagem",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "titulo": {
+              "type": "Text",
+              "config": {
+                "label": "Título",
+                "placeholder": "Digite aqui!"
+              }
+            },
+            "subtitulo": {
+              "type": "Text",
+              "config": {
+                "label": "Subtitulo",
+                "placeholder": "Digite aqui!"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

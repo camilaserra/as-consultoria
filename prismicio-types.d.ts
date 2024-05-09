@@ -5,6 +5,73 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 /**
+ * Item in *banners → banners*
+ */
+export interface BannersDocumentDataBannersItem {
+  /**
+   * imagem field in *banners → banners*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: banners.banners[].imagem
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagem: prismic.ImageField<never>;
+
+  /**
+   * Título field in *banners → banners*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Digite aqui!
+   * - **API ID Path**: banners.banners[].titulo
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  titulo: prismic.KeyTextField;
+
+  /**
+   * Subtitulo field in *banners → banners*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Digite aqui!
+   * - **API ID Path**: banners.banners[].subtitulo
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitulo: prismic.KeyTextField;
+}
+
+/**
+ * Content for banners documents
+ */
+interface BannersDocumentData {
+  /**
+   * banners field in *banners*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: banners.banners[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  banners: prismic.GroupField<Simplify<BannersDocumentDataBannersItem>>;
+}
+
+/**
+ * banners document from Prismic
+ *
+ * - **API ID**: `banners`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BannersDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<BannersDocumentData>,
+    "banners",
+    Lang
+  >;
+
+/**
  * Content for Dados e Redes Sociais documents
  */
 interface DadosERedesSociaisDocumentData {
@@ -175,6 +242,82 @@ export type PostDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PostDocumentData>, "post", Lang>;
 
 /**
+ * Content for Quem somos documents
+ */
+interface QuemSomosDocumentData {
+  /**
+   * Título field in *Quem somos*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Digite aqui!
+   * - **API ID Path**: quem_somos.titulo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  titulo: prismic.KeyTextField;
+
+  /**
+   * Subtitulo field in *Quem somos*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Digite aqui!
+   * - **API ID Path**: quem_somos.subtitulo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitulo: prismic.KeyTextField;
+
+  /**
+   * Conteudo esquerdo field in *Quem somos*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Digite aqui!
+   * - **API ID Path**: quem_somos.conteudo_esquerdo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  conteudo_esquerdo: prismic.RichTextField;
+
+  /**
+   * Imagem field in *Quem somos*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quem_somos.imagem
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagem: prismic.ImageField<never>;
+
+  /**
+   * Conteudo direito field in *Quem somos*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Digite aqui!
+   * - **API ID Path**: quem_somos.conteudo_direito
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  conteudo_direito: prismic.RichTextField;
+}
+
+/**
+ * Quem somos document from Prismic
+ *
+ * - **API ID**: `quem_somos`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type QuemSomosDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<QuemSomosDocumentData>,
+    "quem_somos",
+    Lang
+  >;
+
+/**
  * Content for Serviço documents
  */
 interface ServicoDocumentData {
@@ -218,8 +361,10 @@ export type ServicoDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes =
+  | BannersDocument
   | DadosERedesSociaisDocument
   | PostDocument
+  | QuemSomosDocument
   | ServicoDocument;
 
 declare module "@prismicio/client" {
@@ -232,10 +377,15 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      BannersDocument,
+      BannersDocumentData,
+      BannersDocumentDataBannersItem,
       DadosERedesSociaisDocument,
       DadosERedesSociaisDocumentData,
       PostDocument,
       PostDocumentData,
+      QuemSomosDocument,
+      QuemSomosDocumentData,
       ServicoDocument,
       ServicoDocumentData,
       AllDocumentTypes,
