@@ -5,11 +5,11 @@ import { Metadata } from 'next'
 import React, { cache } from 'react'
 export const fetchCache = 'force-no-store'
 
-const getPostDetails = cache(async (uid: string) => {
+/* const getPostDetails = cache(async (uid: string) => {
     return await client.getByUID("post", uid)
 })
-
-export async function generateMetadata({ params }: { params: { uid: string } }): Promise<Metadata> {
+ */
+/* export async function generateMetadata({ params }: { params: { uid: string } }): Promise<Metadata> {
     const post = await getPostDetails(params.uid)
 
     return {
@@ -23,13 +23,13 @@ export async function generateMetadata({ params }: { params: { uid: string } }):
             ]
         }
     }
-}
+} */
 
 export default async function Page({ params }: { params: { uid: string } }) {
-    const post = await getPostDetails(params.uid)
-
+/*     const post = await getPostDetails(params.uid)
+ */
     return (
-        <div className='max-w-lg mx-auto py-10'>
+        {/* <div className='max-w-lg mx-auto py-10'>
             {
                 post.data.capa.url &&
                 < img src={post.data.capa.url} alt={post.data.capa.alt ?? "capa"} />
@@ -37,6 +37,6 @@ export default async function Page({ params }: { params: { uid: string } }) {
             <h2>{post.data.titulo}</h2>
             <p>{post.data.autor}</p>
             <ContentRichText data={post.data.conteudo} />
-        </div>
+        </div> */}
     )
 }

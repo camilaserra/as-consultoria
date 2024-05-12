@@ -1,0 +1,77 @@
+{
+  "format": "custom",
+  "id": "missao_visao_valores",
+  "label": "Missão, Visão e Valores",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "titulo_missao": {
+        "type": "Text",
+        "config": {
+          "label": "Título missão",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "descricao_misao": {
+        "type": "Text",
+        "config": {
+          "label": "Descrição misão",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "titulo_visao": {
+        "type": "Text",
+        "config": {
+          "label": "Título visão",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "descricao_visao": {
+        "type": "Text",
+        "config": {
+          "label": "Descrição visão",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "titulo_valores": {
+        "type": "Text",
+        "config": {
+          "label": "Título valores",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "grupo_de_valores": {
+        "type": "Group",
+        "config": {
+          "label": "grupo de valores",
+          "repeat": true,
+          "fields": {
+            "titulo": {
+              "type": "Text",
+              "config": {
+                "label": "Título",
+                "placeholder": "Digite aqui!"
+              }
+            },
+            "descricao": {
+              "type": "Text",
+              "config": {
+                "label": "Descrição",
+                "placeholder": "Digite aqui!"
+              }
+            }
+          }
+        }
+      },
+      "ilustracao": {
+        "type": "Image",
+        "config": {
+          "label": "Ilustração",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

@@ -9,18 +9,25 @@ import "../styles/index.scss"
 import DialogPrivacityPolicy from "@/components/Dialogs/DialogPrivacityPolicy";
 const inter = Inter({ subsets: ["latin"] });
 
-
-
-
 export const metadata: Metadata = {
-  title: {
-    default: "AS Consultoria | Home",
-    template: "Nortear a gestão da sua empresa para um serviço de excelência.",
-  },
-  description: "Nortear a gestão da sua empresa para um serviço de excelência.",
-  keywords: ["Gestão Empresarial", "AS COnsultoria", "Engenharia de Produção", "Empresarial", "Gestores", "Empreendedores", "Funcionários", "Consultoria"],
-  twitter: {
-    card: "summary_large_image",
+  title: "AS Consultoria",
+  description: "Viemos com o intuído de nortear gestores, empreendedores, empresários, funcionários, com a visão de processos de um engenheiro de produção, na gestão de sua empresa.",
+  manifest: '/site.webmanifest',
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    url: 'https://as-consultoria.vercel.app/',
+    siteName: 'https://as-consultoria.vercel.app/',
+    title: 'Vaay',
+    description: 'Viemos com o intuído de nortear gestores, empreendedores, empresários, funcionários, com a visão de processos de um engenheiro de produção, na gestão de sua empresa.',
+    images: [
+      {
+        url: '/seo.png',
+        width: 1200,
+        height: 630,
+        alt: 'AS Consultoria',
+      },
+    ],
   },
 };
 
@@ -42,10 +49,11 @@ export default function RootLayout({
         <meta name="twitter:image:height" content="<generated>" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
       </head>
       <body className={inter.className}>
         <Header />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         {children}
         <Footer />
         <MenuHamburguer />

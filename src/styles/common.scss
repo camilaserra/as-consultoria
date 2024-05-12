@@ -40,6 +40,17 @@ body {
     background-color: #4F2877;
     outline: none;
   }
+  
+  // change according site color theme
+  ::-moz-selection {
+    background-color: #4F2877;
+    color: rgb(255, 255, 255);
+  }
+
+  ::selection {
+    background-color: #4F2877;
+    color: rgb(255, 255, 255);
+  }
 }
 
 html {
@@ -51,6 +62,14 @@ html {
 }
 body {
   top: 0px !important;
+}
+
+p {
+  color: #272727;
+}
+
+.hover-item {
+  transition: all 0.5s ease-in-out;
 }
 
 // esconde o spinner do nextjs-progressbar

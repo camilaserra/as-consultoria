@@ -1,0 +1,89 @@
+{
+  "format": "custom",
+  "id": "porque_contratar",
+  "label": "Porque Contratar ",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "titulo": {
+        "type": "Text",
+        "config": {
+          "label": "Título",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "descricao": {
+        "type": "Text",
+        "config": {
+          "label": "Descrição",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "titulo_item_um": {
+        "type": "Text",
+        "config": {
+          "label": "Título item um",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "descricao_item_um": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Descrição item um",
+          "placeholder": "Digite aqui!",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "titulo_item_dois": {
+        "type": "Text",
+        "config": {
+          "label": "Título item dois",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "descricao_item_dois": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Descrição item dois",
+          "placeholder": "Digite aqui!",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "titulo_item_tres": {
+        "type": "Text",
+        "config": {
+          "label": "Título item três",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "descricao_item_tres": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Descrição item três",
+          "placeholder": "Digite aqui!",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "titulo_item_quatro": {
+        "type": "Text",
+        "config": {
+          "label": "Título item quatro",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "descricao_item_quatro": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Descrição item quatro",
+          "placeholder": "Digite aqui!",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      }
+    }
+  }
+}

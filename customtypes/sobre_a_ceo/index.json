@@ -1,0 +1,35 @@
+{
+  "format": "custom",
+  "id": "sobre_a_ceo",
+  "label": "Sobre a CEO",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "imagem": {
+        "type": "Image",
+        "config": {
+          "label": "Imagem",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "titulo": {
+        "type": "Text",
+        "config": {
+          "label": "Título",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "descricao": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Descrição",
+          "placeholder": "Digite aqui!",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,embed,list-item,o-list-item,rtl"
+        }
+      }
+    }
+  }
+}

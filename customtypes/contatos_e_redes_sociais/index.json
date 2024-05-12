@@ -1,0 +1,97 @@
+{
+  "format": "custom",
+  "id": "contatos_e_redes_sociais",
+  "label": "Contatos e Redes Sociais",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "logo_menu": {
+        "type": "Image",
+        "config": {
+          "label": "Logo Menu",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "logo_footer": {
+        "type": "Image",
+        "config": {
+          "label": "Logo Footer",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "endereco": {
+        "type": "Text",
+        "config": {
+          "label": "Endereço",
+          "placeholder": "Ex: Rua do seis, nº 6 ..."
+        }
+      },
+      "email": {
+        "type": "Text",
+        "config": {
+          "label": "Email",
+          "placeholder": "Ex: meuemail@gmail.com"
+        }
+      },
+      "telefone": {
+        "type": "Text",
+        "config": {
+          "label": "Telefone",
+          "placeholder": "Ex: (91) 99999-9999"
+        }
+      },
+      "telefone_link": {
+        "type": "Text",
+        "config": {
+          "label": "Telefone link",
+          "placeholder": "Ex: 91999999999 (números juntos sem espaços e/ou simbolos)"
+        }
+      },
+      "whatsapp": {
+        "type": "Text",
+        "config": {
+          "label": "whatsapp",
+          "placeholder": "Ex: (91) 99999-9999"
+        }
+      },
+      "whatsapp_link": {
+        "type": "Text",
+        "config": {
+          "label": "Whatsapp link",
+          "placeholder": "Ex: 91999999999 (números juntos sem espaços e/ou simbolos)"
+        }
+      },
+      "linkedin": {
+        "type": "Text",
+        "config": {
+          "label": "Linkedin",
+          "placeholder": "Insira o link aqui!"
+        }
+      },
+      "twitter": {
+        "type": "Text",
+        "config": {
+          "label": "twitter",
+          "placeholder": "Insira o link aqui!"
+        }
+      },
+      "facebook": {
+        "type": "Text",
+        "config": {
+          "label": "Facebook",
+          "placeholder": "Insira o link aqui!"
+        }
+      },
+      "instagram": {
+        "type": "Text",
+        "config": {
+          "label": "Instagram",
+          "placeholder": "Insira o link aqui!"
+        }
+      }
+    }
+  }
+}

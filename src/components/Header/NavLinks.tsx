@@ -11,7 +11,7 @@ export const navLinks = [
   },
   {
     route: '/#estrutura',
-    name: 'Estrutura',
+    name: 'Estrutura', 
   },
   {
     route: '/#valores',
@@ -84,7 +84,7 @@ export default function NavLinks() {
         } */
         return (
           <Link key={link.name} href={link.route}>
-            <span className={`${segment === link.route.replace("/", "") ? "font-bold" : "font-light"} hover:opacity-70 text-white uppercase cursor-pointer`}>{link.name}</span>
+            <span className={`${segment === link.route.replace("/", "") ? "font-bold" : "font-normal"} hover:opacity-70 text-white uppercase cursor-pointer`}>{link.name}</span>
           </Link>
         )
       })}

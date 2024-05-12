@@ -5,6 +5,8 @@ import { navLinks } from '../Header/NavLinks'
 import { Icon } from '@iconify/react'
 import { LanguageToggle } from './LanguageToggle'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import { Button } from '../Buttons/Button'
 
 export function MenuHamburguer() {
   const { setShowMenuHamburguer, showMenuHamburguer } = useMenuHamburguerStore()
@@ -18,18 +20,18 @@ export function MenuHamburguer() {
 
   return (
     <div
-      className={`fixed w-[90%] md:hidden h-full bg-[url(/img/background.png)] bg-cover bg-center bg-fixed top-0 flex items-center justify-center shadow-2xl z-[999999] bg-white/80 backdrop-blur-md ${showMenuHamburguer ? 'right-0' : '-right-[700px]'
+      className={`fixed w-[70%] md:hidden h-full bg-[url(/img/background.png)] bg-cover bg-center bg-fixed top-0 flex items-center justify-center shadow-2xl z-[999999] bg-brand-purple-400/90 backdrop-blur-md ${showMenuHamburguer ? 'right-0' : '-right-[700px]'
         } transition-all overflow-y-auto`}
     >
       <div className="w-full h-full relative">
         <Icon
           icon="mdi:close"
-          className="text-3xl absolute top-5 right-5 cursor-pointer"
+          className="text-3xl bg-white rounded-sm text-brand-purple-400 absolute top-5 right-5 cursor-pointer"
           onClick={() => setShowMenuHamburguer(false)}
         />
-        <div className="py-20">
+        <div className="pt-20">
           <div className="flex justify-center py-4 px-10">
-            <img src="/img/logo.png" alt="bredi" />
+            <img src="/img/logo/logo-as-consultoria.png" alt="AS Consultoria" />
           </div>
           {navLinks.map((link) => {
             /* if (link.submenu) {
@@ -54,28 +56,22 @@ export function MenuHamburguer() {
               return (
                 <div
                   key={link.name}
-                  className="text-2xl cursor-pointer text-zinc-900 bg-white p-5 border-b border-brand-yellow"
+                  className="text-lg cursor-pointer text-center text-white py-4 border-b border-white/20"
                   onClick={() => handleRouting(link.route)}
                 >
                   {link.name}
                 </div>
               )
           })}
-          <div className="bg-white py-10">
-            <div className='flex flex-col items-center justify-center pb-5'>
-              <h2>Idioma</h2>
-              <LanguageToggle />
-            </div>
-            <p className="text-zinc-900 text-center text-xl">
-              contato@site.com.br
-            </p>
-            <p className="text-zinc-900 text-center text-xl flex justify-center items-center">
-              <Icon
-                icon="mdi:whatsapp"
-                className="text-yellow-300 mr-2 text-xl"
-              />{' '}
-              (99) 9999-9999
-            </p>
+          <div className="py-4">
+            <a href="mailto:consultoria.as.adm@gmail.com" target="_blank" rel="noreferrer" className='flex p-2 items-center flex-col gap-1 text-2xl'>
+              <p className="text-white text-center text-lg break-all">
+                consultoria.as.adm@gmail.com
+              </p>
+            </a>
+            <a href="tel:+5571999999999" target="_blank" rel="noreferrer" className='flex justify-center'>
+            <Button variant="outlinedWhite">Fale Conosco</Button>
+            </a>
           </div>
         </div>
       </div>

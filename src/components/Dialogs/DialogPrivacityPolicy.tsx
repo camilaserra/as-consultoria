@@ -27,15 +27,15 @@ export default function DialogPrivacityPolicy() {
     <AlertDialog.Root open={open}
     >
       <AlertDialog.Portal>
-        <AlertDialog.Content className="fixed bottom-2 border-t left-[50%] translate-x-[-50%] rounded-2xl bg-white p-5 w-full z-[9999]">
-          <h2 className="text-2xl font-bold">Política de privacidade</h2>
-          <p >
+        <AlertDialog.Content className="fixed border border-b-red-50 bottom-2 border-t left-[50%] w-[90%] md:w-[70%] translate-x-[-50%] rounded-lg bg-brand-purple-300 p-5 z-[9999]">
+          <h2 className="text-2xl font-bold text-white">Política de privacidade</h2>
+          <p className='text-white mb-4'>
             Nós armazenamos dados temporariamente para melhorar a sua experiência de navegação e recomendar conteúdo de seu interesse. Ao utilizar nossos serviços, você concorda com tal monitoramento.
           </p>
           <div className='flex justify-between'>
             <Button
               onClick={setCookie}
-              variant='outlinedBlack'
+              variant='outlinedWhite'
             >
               Aceitar Cookies
             </Button>
@@ -43,7 +43,7 @@ export default function DialogPrivacityPolicy() {
               onClick={() => {
                 setOpen(false)
               }}
-              variant='outlinedBlack'
+              variant='outlinedWhite'
             >
               Rejeitar
             </Button>

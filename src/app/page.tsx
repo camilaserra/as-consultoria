@@ -3,6 +3,11 @@ import SectionFaq from "@/components/Sections/SectionFaq";
 import { Metadata } from "next";
 import { client } from "@/services/prismicClient";
 import SectionQuemSomos from "@/components/Sections/SectionQuemSomos";
+import SectionNossaEstrutura from "@/components/Sections/SectionNossaEstrutura";
+import SectionValores from "@/components/Sections/SectionValores";
+import SectionPorqueContratar from "@/components/Sections/SectionPorqueContratar";
+import SectionCEO from "@/components/Sections/SectionCEO";
+import SectionInvista from "@/components/Sections/SectionInvista";
 
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -10,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       images: [
         {
-          url: "https://boilerplate-prismic-next14.vercel.app/seo.png",
+          url: "https://as-consultoria.vercel.app/seo.png",
         },
       ],
     },
@@ -18,14 +23,16 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Home() {
-
   
-
   return (
     <main> 
-     <SwiperHero />
-     <SectionQuemSomos />
-      <SectionFaq />
+      <SwiperHero />
+      <SectionQuemSomos />
+      <SectionNossaEstrutura />
+      <SectionValores />
+      <SectionPorqueContratar />
+      <SectionCEO />
+      <SectionInvista />
     </main>
   );
 }

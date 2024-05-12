@@ -11,7 +11,7 @@ export function Welcome() {
 
     return (
         <div>
-            <Button variant={"outlinedBlack"} onClick={handleShowToast}>Click</Button>
+            <Button variant={"primaryPurple"} onClick={handleShowToast}>Click</Button>
         </div>
     )
 }

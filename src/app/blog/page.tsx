@@ -11,11 +11,10 @@ export const metadata: Metadata = {
   
 
 export default async function Page() {
-    const posts = await client.getAllByType("post")
 
     return (
         <div className='flex justify-center gap-10 flex-wrap pt-10 pb-40'>
-            {posts.map((post) => (
+           {/*  {posts.map((post) => (
                 <Link href={`/blog/${post.uid}`} key={post.id} className='max-w-sm border p-5 shadow'>
                     {
                         post.data.capa.url &&
@@ -24,7 +23,7 @@ export default async function Page() {
                     <h2>{post.data.titulo}</h2>
                     <p>{post.data.autor}</p>
                 </Link>
-            ))}
+            ))} */}
         </div>
     )
 }

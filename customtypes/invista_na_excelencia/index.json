@@ -1,0 +1,39 @@
+{
+  "format": "custom",
+  "id": "invista_na_excelencia",
+  "label": "Invista na Excelência",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "titulo": {
+        "type": "Text",
+        "config": {
+          "label": "Título",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "descricao": {
+        "type": "Text",
+        "config": {
+          "label": "Descrição",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "titulo_whatsapp": {
+        "type": "Text",
+        "config": {
+          "label": "Título whatsapp",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "titulo_email": {
+        "type": "Text",
+        "config": {
+          "label": "Título email",
+          "placeholder": "Digite aqui!"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "format": "custom",
+  "id": "nossa_estrutura",
+  "label": "Nossa Estrutura",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "titulo": {
+        "type": "Text",
+        "config": {
+          "label": "Título",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "subtitulo": {
+        "type": "Text",
+        "config": {
+          "label": "Subtitulo",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "descricao": {
+        "type": "Text",
+        "config": {
+          "label": "Descrição",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "icone_card_um": {
+        "type": "Image",
+        "config": {
+          "label": "Icone card um",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "icone_card_um_variavel": {
+        "type": "Image",
+        "config": {
+          "label": "Icone card um variável ",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "titulo_card_um": {
+        "type": "Text",
+        "config": {
+          "label": "Título card um",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "descricao_card_um": {
+        "type": "Text",
+        "config": {
+          "label": "Descrição card um",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "icone_card_dois": {
+        "type": "Image",
+        "config": {
+          "label": "Icone card dois",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "icone_card_dois_variavel": {
+        "type": "Image",
+        "config": {
+          "label": "icone card dois variável",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "titulo_card_dois": {
+        "type": "Text",
+        "config": {
+          "label": "Título card dois",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "descricao_card_dois": {
+        "type": "Text",
+        "config": {
+          "label": "Descrição card dois",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "icone_card_tres": {
+        "type": "Image",
+        "config": {
+          "label": "Icone card três",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "icone_card_tres_variavel": {
+        "type": "Image",
+        "config": {
+          "label": "Icone card três variável",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "titulo_card_tres": {
+        "type": "Text",
+        "config": {
+          "label": "Título card três",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "descricao_card_tres": {
+        "type": "Text",
+        "config": {
+          "label": "Descrição card três",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "icone_card_quatro": {
+        "type": "Image",
+        "config": {
+          "label": "Icone card quatro",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "icone_card_quatro_variavel": {
+        "type": "Image",
+        "config": {
+          "label": "Icone card quatro variável",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "titulo_card_quatro": {
+        "type": "Text",
+        "config": {
+          "label": "Título card quatro",
+          "placeholder": "Digite aqui!"
+        }
+      },
+      "descricao_card_quatro": {
+        "type": "Text",
+        "config": {
+          "label": "Descrição card quatro",
+          "placeholder": "Digite aqui!"
+        }
+      }
+    }
+  }
+}

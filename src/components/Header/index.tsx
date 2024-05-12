@@ -9,10 +9,17 @@ import useMenuHamburguerStore from '../../stores/useMenuHamburguerStore'
 import { useEffect } from 'react'
 import Icon from '../Adapters/Icon'
 import { Button } from '../Buttons/Button'
+import { client } from '@/services/prismicClient'
+import useSWR from 'swr'
+
 
 export function Header() {
   const { y } = useWindowScroll()
   const { setShowMenuHamburguer } = useMenuHamburguerStore()
+
+  const { data: contact } = useSWR('getContatosHeader', () =>
+    client.getSingle('contatos_e_redes_sociais')
+  )
 
   const pathname = typeof window !== 'undefined' ? window.location.pathname : ''
 
@@ -30,20 +37,22 @@ export function Header() {
         <div className="flex items-center justify-between">
           <Link href="/">
             <img
-              src="/img/logo/logo-as-consultoria.png"
-              alt=""
+              src={contact?.data.logo_menu.url as string}
+              alt={contact?.data.logo_menu.alt as string}
               className="py-3 transition-all cursor-pointer"
               style={{ height: y > 0 ? '5rem' : '7rem' }}
             />
           </Link>
-          <div className='hidden md:flex items-center gap-4'>
+          <div className='hidden lg:flex items-center gap-4'>
             <NavLinks />
-            <Link href="/contato">
-              <Button variant="outlinedWhite">Fale Conosco</Button>
-            </Link>
+          </div>
+          <div className='hidden md:flex items-center gap-4'>
+            <a href={`https://api.whatsapp.com/send/?phone=55${contact?.data.whatsapp_link}`} target="_blank" rel="noreferrer">                            
+                <Button variant="outlinedWhite">Fale Conosco</Button>
+            </a>
           </div>
           <div
-            className="md:hidden"
+            className="lg:hidden"
             onClick={() => setShowMenuHamburguer(true)}
           >
             <Icon icon="mdi:menu" className="text-white text-3xl" />

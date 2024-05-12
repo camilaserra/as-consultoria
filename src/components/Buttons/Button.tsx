@@ -6,7 +6,8 @@ type Props = {
   children: React.ReactNode
   variant:
   | 'outlinedWhite'
-  | 'outlinedBlack'
+  | 'primaryPurple'
+  | 'primaryWhite'
   color?: string
   disabled?: boolean
   onClick?: any
@@ -24,14 +25,16 @@ export function Button({
   full = false,
   isLoading = false,
 }: Props) {
-  const outlinedWhite = 'bg-transparent border border-white text-white rounded-md hover:bg-white hover:text-brand-purple-400'
-  const outlinedBlack = 'bg-transparent border border-black text-black'
+  const outlinedWhite = 'bg-transparent border border-white text-white rounded-md hover:bg-white hover:text-brand-purple-400 hover-item'
+  const primaryPurple = 'bg-brand-purple-300 text-white rounded-full hover:bg-brand-purple-400 hover-item shadow-lg hover:-translate-y-1'
+  const primaryWhite = 'bg-white text-brand-purple-400 border border-white rounded-full hover-item shadow-lg hover:border-brand-purple-400 hover:-translate-y-1'
 
   return (
     <button
-      className={`flex items-center justify-center gap-2 px-4 py-2 transition-all hover:opacity-75 disabled:opacity-50
+      className={`flex items-center justify-center gap-1 px-4 py-2 transition-all
         ${variant === 'outlinedWhite' && outlinedWhite}
-        ${variant === 'outlinedBlack' && outlinedBlack}
+        ${variant === 'primaryPurple' && primaryPurple}
+        ${variant === 'primaryWhite' && primaryWhite}
         ${full ? 'w-full' : 'w-fit'}
       `}
       onClick={onClick}

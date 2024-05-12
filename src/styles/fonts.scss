@@ -1,5 +1,5 @@
 * {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 
@@ -20,38 +20,22 @@ input,
 select,
 textarea,
 button {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 // example to external fonts
 @font-face {
-  font-family: 'BD Colonius';
-  src: local('BD Colonius'), url('./fonts/BD Colonius.otf') format('opentype');
-  font-weight: normal;
-}
-@font-face {
-  font-family: 'GaramondPremrPro';
-  src: local('GaramondPremrPro'), url('./fonts/GaramondPremrPro.otf') format('opentype');
+  font-family: 'Trajan Pro Regular';
+  src: local('TrajanProRegular'),
+    url('/styles/fonts/TrajanPro-Regular.ttf') format('woff');
   font-weight: normal;
 }
 
-@font-face {
-  font-family: 'Garamond';
-  src: local('Garamond'), url('./fonts/Garamond.ttf') format('truetype');
-  font-weight: normal;
+.trajan {
+  font-family: 'Trajan Pro Regular';
 }
 
-@font-face {
-  font-family: 'Forma DJR Display';
-  src: local('Forma DJR Display'),
-    url('./fonts/FormaDJRBanner-Regular-Testing.ttf') format('woff');
-  font-weight: normal;
+.barlow {
+  font-family: "Barlow", sans-serif;
 }
 
-.font-colonius {
-  font-family: 'BD Colonius';
-}
-
-// {
-//   font-family: 'GaramondPremrPro', serif;
-// }
