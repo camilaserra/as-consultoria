@@ -19,7 +19,7 @@ export const navLinks = [
   },
   {
     route: '/#porque-contratar',
-    name: 'Porque Contratar?',
+    name: 'Por que Contratar?',
   },
   {
     route: '/#a-ceo',

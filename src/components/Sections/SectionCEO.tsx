@@ -12,7 +12,7 @@ import { Fade } from "react-awesome-reveal";
 export default function SectionCEO() {
   const { data: ceo } = useSWR('getSobreCEO', () =>
     client.getSingle('sobre_a_ceo')
-)
+  )
   return (
     <div className='pb-32 md:pb-48 pt-20 bg-brand-purple-550 relative'>
       <Container>
@@ -25,7 +25,7 @@ export default function SectionCEO() {
           </div>
           <div className='col-span-12 md:col-span-6 px-10 flex justify-center'>
           <Fade duration={3000}>       
-            <img src={ceo?.data.imagem.url as string} alt={ceo?.data.imagem.alt as string} className='w-[70%]' />
+            <img src={ceo?.data.imagem.url as string} alt={ceo?.data.imagem.alt as string} className='w-[100%] md:w-[70%]' />
           </Fade>
           </div>
         </div>

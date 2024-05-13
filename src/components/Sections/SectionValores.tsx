@@ -53,7 +53,7 @@ export default async function SectionValores() {
               <div className='grid grid-cols-12 gap-2'>
                 {values?.data.grupo_de_valores.map((par, index) => {
                   return (
-                    <div key={index} className='col-span-12 md:col-span-4'>
+                    <div key={index} className='col-span-12 md:col-span-4 px-2 md:px-0'>
                       <p className='text-lg text-brand-purple-400 font-semibold text-center md:text-start'>{par.titulo}</p>
                       <p className='text-sm text-brand-purple-400 text-center md:text-start'>{par.descricao}</p>
                     </div>

@@ -225,6 +225,49 @@ export type ContatosERedesSociaisDocument<Lang extends string = string> =
   >;
 
 /**
+ * Content for Cookies documents
+ */
+interface CookiesDocumentData {
+  /**
+   * Título field in *Cookies*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Digite aqui!
+   * - **API ID Path**: cookies.titulo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  titulo: prismic.KeyTextField;
+
+  /**
+   * Conteúdo field in *Cookies*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Digite aqui!
+   * - **API ID Path**: cookies.conteudo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  conteudo: prismic.RichTextField;
+}
+
+/**
+ * Cookies document from Prismic
+ *
+ * - **API ID**: `cookies`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CookiesDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<CookiesDocumentData>,
+    "cookies",
+    Lang
+  >;
+
+/**
  * Content for Invista na Excelência documents
  */
 interface InvistaNaExcelenciaDocumentData {
@@ -682,6 +725,17 @@ interface PorqueContratarDocumentData {
   titulo_item_um: prismic.KeyTextField;
 
   /**
+   * Imagem item um field in *Porque Contratar *
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: porque_contratar.imagem_item_um
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagem_item_um: prismic.ImageField<never>;
+
+  /**
    * Descrição item um field in *Porque Contratar *
    *
    * - **Field Type**: Rich Text
@@ -702,6 +756,17 @@ interface PorqueContratarDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   titulo_item_dois: prismic.KeyTextField;
+
+  /**
+   * Imagem item dois field in *Porque Contratar *
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: porque_contratar.imagem_item_dois
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagem_item_dois: prismic.ImageField<never>;
 
   /**
    * Descrição item dois field in *Porque Contratar *
@@ -726,6 +791,17 @@ interface PorqueContratarDocumentData {
   titulo_item_tres: prismic.KeyTextField;
 
   /**
+   * Imagem item três field in *Porque Contratar *
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: porque_contratar.imagem_item_tres
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagem_item_tres: prismic.ImageField<never>;
+
+  /**
    * Descrição item três field in *Porque Contratar *
    *
    * - **Field Type**: Rich Text
@@ -746,6 +822,17 @@ interface PorqueContratarDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   titulo_item_quatro: prismic.KeyTextField;
+
+  /**
+   * Imagem item quatro field in *Porque Contratar *
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: porque_contratar.imagem_item_quatro
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagem_item_quatro: prismic.ImageField<never>;
 
   /**
    * Descrição item quatro field in *Porque Contratar *
@@ -908,6 +995,7 @@ export type SobreACeoDocument<Lang extends string = string> =
 export type AllDocumentTypes =
   | BannersDocument
   | ContatosERedesSociaisDocument
+  | CookiesDocument
   | InvistaNaExcelenciaDocument
   | MissaoVisaoValoresDocument
   | NossaEstruturaDocument
@@ -930,6 +1018,8 @@ declare module "@prismicio/client" {
       BannersDocumentDataBannersItem,
       ContatosERedesSociaisDocument,
       ContatosERedesSociaisDocumentData,
+      CookiesDocument,
+      CookiesDocumentData,
       InvistaNaExcelenciaDocument,
       InvistaNaExcelenciaDocumentData,
       MissaoVisaoValoresDocument,

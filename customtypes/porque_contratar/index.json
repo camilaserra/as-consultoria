@@ -27,6 +27,14 @@
           "placeholder": "Digite aqui!"
         }
       },
+      "imagem_item_um": {
+        "type": "Image",
+        "config": {
+          "label": "Imagem item um",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "descricao_item_um": {
         "type": "StructuredText",
         "config": {
@@ -41,6 +49,14 @@
         "config": {
           "label": "Título item dois",
           "placeholder": "Digite aqui!"
+        }
+      },
+      "imagem_item_dois": {
+        "type": "Image",
+        "config": {
+          "label": "Imagem item dois",
+          "constraint": {},
+          "thumbnails": []
         }
       },
       "descricao_item_dois": {
@@ -59,6 +75,14 @@
           "placeholder": "Digite aqui!"
         }
       },
+      "imagem_item_tres": {
+        "type": "Image",
+        "config": {
+          "label": "Imagem item três",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "descricao_item_tres": {
         "type": "StructuredText",
         "config": {
@@ -73,6 +97,14 @@
         "config": {
           "label": "Título item quatro",
           "placeholder": "Digite aqui!"
+        }
+      },
+      "imagem_item_quatro": {
+        "type": "Image",
+        "config": {
+          "label": "Imagem item quatro",
+          "constraint": {},
+          "thumbnails": []
         }
       },
       "descricao_item_quatro": {

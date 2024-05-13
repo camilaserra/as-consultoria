@@ -61,7 +61,7 @@ export default function TabProduct() {
                     <div className='grid grid-cols-12 gap-2'>
                        <div className=' col-span-12 md:col-span-5 md:pl-6'>
                        <Fade duration={3000}>       
-                            <img src="/img/elements/img-woman-section-porque-investir.png" alt="" className='h-full w-full object-cover' />
+                            <img src={why?.data.imagem_item_um.url as string} alt={why?.data.imagem_item_um.alt as string} className='h-full w-full object-cover' />
                         </Fade>
                        </div>
                        <div className='col-span-12 md:col-span-7 md:pr-10 flex items-center'>
@@ -82,7 +82,7 @@ export default function TabProduct() {
                     <div className='grid grid-cols-12 gap-2'>
                         <div className=' col-span-12 md:col-span-5 md:pl-6'>
                         <Fade duration={3000}>       
-                            <img src="/img/elements/img-woman-section-porque-investir.png" alt="" className='h-full w-full object-cover' />
+                            <img src={why?.data.imagem_item_dois.url as string} alt={why?.data.imagem_item_dois.alt as string} className='h-full w-full object-cover' />
                         </Fade>                        </div>
                         <div className=' col-span-12 md:col-span-7 md:pr-10 flex items-center'>
                             <ContentRichText data={why?.data.descricao_item_dois} />
@@ -102,7 +102,7 @@ export default function TabProduct() {
                     <div className='grid grid-cols-12 gap-2'>
                         <div className=' col-span-12 md:col-span-5 md:pl-6'>
                         <Fade duration={3000}>       
-                            <img src="/img/elements/img-woman-section-porque-investir.png" alt="" className='h-full w-full object-cover' />
+                            <img src={why?.data.imagem_item_tres.url as string} alt={why?.data.imagem_item_tres.alt as string} className='h-full w-full object-cover' />
                         </Fade>                        </div>
                         <div className=' col-span-12 md:col-span-7 md:pr-10 flex items-center'>
                             <ContentRichText data={why?.data.descricao_item_tres} />
@@ -122,7 +122,7 @@ export default function TabProduct() {
                     <div className='grid grid-cols-12 gap-2'>
                         <div className=' col-span-12 md:col-span-5 md:pl-6'>
                         <Fade duration={3000}>       
-                            <img src="/img/elements/img-woman-section-porque-investir.png" alt="" className='h-full w-full object-cover' />
+                            <img src={why?.data.imagem_item_quatro.url as string} alt={why?.data.imagem_item_quatro.alt as string} className='h-full w-full object-cover' />
                         </Fade>                        </div>
                         <div className=' col-span-12 md:col-span-7 md:pr-10 flex items-center'>
                             <ContentRichText data={why?.data.descricao_item_quatro} />
