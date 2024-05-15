@@ -38,7 +38,7 @@ export default function SwiperHero() {
               </Fade>
             </div>
           </Container>
-          <img src="/img/elements/element-01-gray.png" alt="Imagem element white" className='absolute bottom-0 z-40 hidden md:block' />
+          <img src="/img/elements/element-01-gray.png" alt="Imagem element white" className='absolute bottom-0 z-40 block' />
           <span className="absolute bottom-0 h-[100%] w-full bg-gradient-to-t from-brand-purple-500 to-black/20"></span>
           <div id='quem-somos'></div>
         </SwiperSlide>
