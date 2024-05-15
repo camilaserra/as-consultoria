@@ -7,8 +7,14 @@ import { LanguageToggle } from './LanguageToggle'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from '../Buttons/Button'
+import { client } from '@/services/prismicClient'
+import useSWR from 'swr'
+
 
 export function MenuHamburguer() {
+  const { data: contact } = useSWR('getContatosMenuHamburgueer', () =>
+    client.getSingle('contatos_e_redes_sociais')
+)
   const { setShowMenuHamburguer, showMenuHamburguer } = useMenuHamburguerStore()
 
   const router = useRouter() // router.push('/')
@@ -20,7 +26,7 @@ export function MenuHamburguer() {
 
   return (
     <div
-      className={`fixed w-[70%] md:hidden h-full bg-[url(/img/background.png)] bg-cover bg-center bg-fixed top-0 flex items-center justify-center shadow-2xl z-[999999] bg-brand-purple-400/90 backdrop-blur-md ${showMenuHamburguer ? 'right-0' : '-right-[700px]'
+      className={`fixed w-[75%] md:hidden h-full bg-[url(/img/background.png)] bg-cover bg-center bg-fixed top-0 flex items-center justify-center shadow-2xl z-[999999] bg-brand-purple-400/90 backdrop-blur-md ${showMenuHamburguer ? 'right-0' : '-right-[700px]'
         } transition-all overflow-y-auto`}
     >
       <div className="w-full h-full relative">
@@ -31,7 +37,7 @@ export function MenuHamburguer() {
         />
         <div className="pt-20">
           <div className="flex justify-center py-4 px-10">
-            <img src="/img/logo/logo-as-consultoria.png" alt="AS Consultoria" />
+            <img src={contact?.data.logo_menu.url as string} alt="AS Consultoria" />
           </div>
           {navLinks.map((link) => {
             /* if (link.submenu) {
