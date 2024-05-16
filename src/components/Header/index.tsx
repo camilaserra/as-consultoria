@@ -40,7 +40,7 @@ export function Header() {
               src={contact?.data.logo_menu.url as string}
               alt={contact?.data.logo_menu.alt as string}
               className="py-3 transition-all cursor-pointer"
-              style={{ height: y > 0 ? '5rem' : '7rem' }}
+              style={{ height: y > 0 ? '6rem' : '9rem' }}
             />
           </Link>
           <div className='hidden lg:flex items-center gap-4'>
