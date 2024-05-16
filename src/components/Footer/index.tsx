@@ -62,15 +62,26 @@ export default function Footer() {
                       <Icon icon="jam:linkedin" className='text-white group-hover:text-brand-purple-400' />
                     </a>
                   )}
-                  <a href={contact?.data.twitter as string} rel="noreferrer" target="_blank" className='p-1 group rounded-full bg-brand-purple-200 w-10 h-10 flex justify-center items-center hover-item hover:bg-brand-purple-100'>
+                  {contact?.data.twitter && (
+                    <a href={contact?.data.twitter as string} rel="noreferrer" target="_blank" className='p-1 group rounded-full bg-brand-purple-200 w-10 h-10 flex justify-center items-center hover-item hover:bg-brand-purple-100'>
                     <Icon icon="prime:twitter" className='text-white group-hover:text-brand-purple-400' />
                   </a>
-                  <a href={contact?.data.facebook as string} rel="noreferrer" target="_blank" className='p-1 group rounded-full bg-brand-purple-200 w-10 h-10 flex justify-center items-center hover-item hover:bg-brand-purple-100'>
-                    <Icon icon="ri:facebook-fill" className='text-white group-hover:text-brand-purple-400' />
-                  </a>
-                  <a href={contact?.data.instagram as string} rel="noreferrer" target="_blank" className='p-1 group rounded-full bg-brand-purple-200 w-10 h-10 flex justify-center items-center hover-item hover:bg-brand-purple-100'>
-                    <Icon icon="mdi:instagram" className='text-white group-hover:text-brand-purple-400' />
-                  </a>
+                  )}
+                  {contact?.data.facebook && (
+                      <a href={contact?.data.facebook as string} rel="noreferrer" target="_blank" className='p-1 group rounded-full bg-brand-purple-200 w-10 h-10 flex justify-center items-center hover-item hover:bg-brand-purple-100'>
+                      <Icon icon="ri:facebook-fill" className='text-white group-hover:text-brand-purple-400' />
+                    </a>
+                  )}
+                  {contact?.data.instagram && (
+                       <a href={contact?.data.instagram as string} rel="noreferrer" target="_blank" className='p-1 group rounded-full bg-brand-purple-200 w-10 h-10 flex justify-center items-center hover-item hover:bg-brand-purple-100'>
+                       <Icon icon="mdi:instagram" className='text-white group-hover:text-brand-purple-400' />
+                     </a>
+                  )}
+                  
+                  
+                  
+                
+                 
                 </div>
               </div>
 
