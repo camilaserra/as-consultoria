@@ -29,7 +29,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full transition-all ${y > 0 ? ' bg-brand-purple-400 shadow-xl ' : 'bg-transparent'
+      className={`fixed z-[999] top-0 w-full transition-all ${y > 0 ? ' bg-brand-purple-400 shadow-xl ' : 'bg-transparent'
         } `}
     >
    {/*    <TopBar /> */}

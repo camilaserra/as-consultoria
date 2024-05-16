@@ -37,7 +37,7 @@ export function MenuHamburguer() {
         />
         <div className="pt-20">
           <div className="flex justify-center py-4 px-10">
-            <img src={contact?.data.logo_menu.url as string} alt="AS Consultoria" />
+            <img src={contact?.data.logo_menu.url as string} alt="AS Consultoria" className='h-28' />
           </div>
           {navLinks.map((link) => {
             /* if (link.submenu) {
