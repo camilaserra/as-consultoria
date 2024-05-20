@@ -59,10 +59,10 @@ export default function TabProduct({why}: {why: PorqueContratarDocument}) {
                 {activeTab === 1 && (
                     <div className='grid grid-cols-12 gap-2'>
                        <div className='col-span-12 md:col-span-5 relative'>
-                            <Fade duration={3000} className='w-full object-cover bg-pink-600 h-[300px]' >       
+                            <Fade duration={3000} className='w-full object-cover h-[300px]' >       
                                 <img src={why?.data.imagem_item_um.url as string} alt={why?.data.imagem_item_um.alt as string} className='h-[300px] w-full object-cover border-r border-white'/>
                             </Fade>
-                            <span className="absolute bottom-0 h-[300px] w-full bg-gradient-to-l from-white to-white/20"></span>
+                            <span className="absolute bottom-0 h-[300px] w-full md:bg-gradient-to-l from-white to-white/20"></span>
                        </div>
                        <div className='col-span-12 md:col-span-7 md:pr-10 flex items-center'>
                             <ContentRichText data={why?.data.descricao_item_um} />
