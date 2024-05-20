@@ -2,21 +2,16 @@
 'use client'
 import React from 'react'
 import { Container } from '../Partials/Container'
-import { client } from '@/services/prismicClient'
 export const fetchCache = 'force-no-store'
-import useSWR from 'swr'
 import { Button } from '../Buttons/Button'
 import Icon from '../Adapters/Icon'
 import { Fade } from "react-awesome-reveal";
+import { ContatosERedesSociaisDocument, MissaoVisaoValoresDocument } from '../../../prismicio-types'
 
 
-export default async function SectionValores() {
-  const { data: values } = useSWR('getValores', () =>
-    client.getSingle('missao_visao_valores')
-  )
-  const { data: contact } = useSWR('getContatosTres', () =>
-    client.getSingle('contatos_e_redes_sociais')
-  )
+export default function SectionValores({values, contact}: {values: MissaoVisaoValoresDocument, contact: ContatosERedesSociaisDocument}) {
+
+ 
   
   return (
     <div className='relative'>

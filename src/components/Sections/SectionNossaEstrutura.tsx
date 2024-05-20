@@ -2,23 +2,16 @@
 'use client'
 import React from 'react'
 import { Container } from '../Partials/Container'
-import { client } from '@/services/prismicClient'
 export const fetchCache = 'force-no-store'
-import useSWR from 'swr'
 import CardService from '../Cards/CardService'
 import { Button } from '../Buttons/Button'
 import Icon from '../Adapters/Icon'
 import { Fade } from "react-awesome-reveal";
+import { ContatosERedesSociaisDocument, NossaEstruturaDocument } from '../../../prismicio-types'
 
 
-export default function SectionNossaEstrutura() {
-  const { data: info } = useSWR('getNossaEstrutura', () =>
-    client.getSingle('nossa_estrutura')
-  )
-  const { data: contact } = useSWR('getContatosDois', () =>
-    client.getSingle('contatos_e_redes_sociais')
-  )
-  
+export default function SectionNossaEstrutura({info, contact}: {info: NossaEstruturaDocument, contact: ContatosERedesSociaisDocument}) {
+ 
   return (
     <div className="bg-white relative pb-20 md:pb-48">
       <Container>

@@ -4,27 +4,21 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 // @ts-ignore
 import { Pagination, Autoplay } from 'swiper'
 import { Container } from '../Partials/Container'
-import { client } from '@/services/prismicClient'
-import useSWR from 'swr'
 import { Fade } from "react-awesome-reveal";
+import { BannersDocument } from '../../../prismicio-types'
 
 
 export const fetchCache = 'force-no-store'
 export const dynamic = 'force-dynamic'
 
-export default function SwiperHero() {
-  const { data: banners } = useSWR('getBanners', () =>
-    client.getSingle('banners')
-  )
-
-  console.log(banners)
+export default function SwiperHero({banners}: {banners: BannersDocument}) {
   
   return (
     <Swiper
       pagination={false}
       modules={[Pagination, Autoplay]}
       autoplay={{ delay: 5000 }}
-      className="aspect-[21/16] md:aspect-[21/10] md:h-auto"
+      className="aspect-[21/20] md:aspect-[21/10] md:h-auto"
     >
       {banners?.data.banners.map((imagem, index) => (
         <SwiperSlide key={index} style={{ backgroundImage: `url(${imagem.imagem.url})` }} className="bg-cover bg-center bg-no-repeat flex items-center justify-start relative bg-black">

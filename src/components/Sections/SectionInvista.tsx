@@ -2,20 +2,15 @@
 'use client'
 import React from 'react'
 import { Container } from '../Partials/Container'
-import { client } from '@/services/prismicClient'
-import useSWR from 'swr'
 import Icon from '../Adapters/Icon'
 import { Fade } from "react-awesome-reveal";
+import { ContatosERedesSociaisDocument, InvistaNaExcelenciaDocument } from '../../../prismicio-types'
 
 
 
-export default function SectionInvista() {
-    const { data: invista } = useSWR('getInvista', () =>
-        client.getSingle('invista_na_excelencia')
-    )
-    const { data: contact } = useSWR('getContatosInvista', () =>
-        client.getSingle('contatos_e_redes_sociais')
-    )
+export default function SectionInvista({ invista, contact}: { invista: InvistaNaExcelenciaDocument, contact: ContatosERedesSociaisDocument}) {
+   
+ 
     return (
         <div className='pt-10 pb-10 md:pb-20'>
             <Container>

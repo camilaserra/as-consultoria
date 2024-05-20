@@ -39,8 +39,14 @@ export function Header() {
             <img
               src={contact?.data.logo_menu.url as string}
               alt={contact?.data.logo_menu.alt as string}
-              className="py-3 transition-all cursor-pointer"
+              className="py-3 hidden md:block transition-all cursor-pointer"
               style={{ height: y > 0 ? '6rem' : '9rem' }}
+            />
+             <img
+              src={contact?.data.logo_menu.url as string}
+              alt={contact?.data.logo_menu.alt as string}
+              className="py-3 block md:hidden transition-all cursor-pointer"
+              style={{ height: y > 0 ? '7rem' : '8rem' }}
             />
           </Link>
           <div className='hidden lg:flex items-center gap-4'>

@@ -7,18 +7,17 @@ import ContentRichText from '../Prismic/ContentRichText';
 import { Button } from '../Buttons/Button';
 import Icon from '../Adapters/Icon';
 import { Fade } from "react-awesome-reveal";
+import { PorqueContratarDocument } from '../../../prismicio-types';
 
 
 
-export default function TabProduct() {
+export default function TabProduct({why}: {why: PorqueContratarDocument}) {
   const [activeTab, setActiveTab] = useState<number>(1);
 
   const handleTabChange = (tabIndex: number) => {
     setActiveTab(tabIndex);
   };
-  const { data: why } = useSWR('getPorqueContratar', () =>
-    client.getSingle('porque_contratar')
-  )
+ 
   const { data: contact } = useSWR('getPorqueContratar', () =>
     client.getSingle('contatos_e_redes_sociais')
   )
@@ -26,7 +25,7 @@ export default function TabProduct() {
   return (
     <>
         <div className=''>
-            <div className="grid grid-cols-12 py-4 md:px-6 gap-2"> 
+            <div className="grid grid-cols-12 py-4 md:px-0 gap-2"> 
                 <button
                 className={`flex items-center justify-center p-4 col-span-12 md:col-span-6 lg:col-span-3 hover-item hover:bg-brand-purple-300 group rounded-t-md ${activeTab === 1 ? 'bg-brand-purple-200' : ' bg-brand-purple-100'}`}
                 onClick={() => handleTabChange(1)}
@@ -59,10 +58,11 @@ export default function TabProduct() {
             <div className="tab-content">
                 {activeTab === 1 && (
                     <div className='grid grid-cols-12 gap-2'>
-                       <div className=' col-span-12 md:col-span-5 md:pl-6'>
-                       <Fade duration={3000}>       
-                            <img src={why?.data.imagem_item_um.url as string} alt={why?.data.imagem_item_um.alt as string} className='h-full w-full object-cover' />
-                        </Fade>
+                       <div className='col-span-12 md:col-span-5 relative'>
+                            <Fade duration={3000} className='w-full object-cover bg-pink-600 h-[300px]' >       
+                                <img src={why?.data.imagem_item_um.url as string} alt={why?.data.imagem_item_um.alt as string} className='h-[300px] w-full object-cover border-r border-white'/>
+                            </Fade>
+                            <span className="absolute bottom-0 h-[300px] w-full bg-gradient-to-l from-white to-white/20"></span>
                        </div>
                        <div className='col-span-12 md:col-span-7 md:pr-10 flex items-center'>
                             <ContentRichText data={why?.data.descricao_item_um} />
@@ -80,10 +80,12 @@ export default function TabProduct() {
 
                 {activeTab === 2 && (
                     <div className='grid grid-cols-12 gap-2'>
-                        <div className=' col-span-12 md:col-span-5 md:pl-6'>
-                        <Fade duration={3000}>       
-                            <img src={why?.data.imagem_item_dois.url as string} alt={why?.data.imagem_item_dois.alt as string} className='h-full w-full object-cover' />
-                        </Fade>                        </div>
+                        <div className=' col-span-12 md:col-span-5 relative'>
+                            <Fade duration={3000}  className='w-full object-cover h-[300px]' >       
+                                <img src={why?.data.imagem_item_dois.url as string} alt={why?.data.imagem_item_dois.alt as string} className='h-[300px] object-cover w-full border-r border-white' />
+                            </Fade>   
+                            <span className="absolute bottom-0 h-[300px] w-full bg-gradient-to-l from-white to-white/5"></span>                 
+                        </div>
                         <div className=' col-span-12 md:col-span-7 md:pr-10 flex items-center'>
                             <ContentRichText data={why?.data.descricao_item_dois} />
                         </div>
@@ -100,10 +102,12 @@ export default function TabProduct() {
 
                 {activeTab === 3 && (
                     <div className='grid grid-cols-12 gap-2'>
-                        <div className=' col-span-12 md:col-span-5 md:pl-6'>
-                        <Fade duration={3000}>       
-                            <img src={why?.data.imagem_item_tres.url as string} alt={why?.data.imagem_item_tres.alt as string} className='h-full w-full object-cover' />
-                        </Fade>                        </div>
+                        <div className=' col-span-12 md:col-span-5 relative'>
+                            <Fade duration={3000} className='w-full object-cover bg-pink-600 h-[300px]'>       
+                                <img src={why?.data.imagem_item_tres.url as string} alt={why?.data.imagem_item_tres.alt as string} className='h-[300px] object-cover w-full border-r border-white' />
+                            </Fade>   
+                            <span className="absolute bottom-0 h-[300px] w-full bg-gradient-to-l from-white to-white/20"></span>
+                        </div>
                         <div className=' col-span-12 md:col-span-7 md:pr-10 flex items-center'>
                             <ContentRichText data={why?.data.descricao_item_tres} />
                         </div>
@@ -120,10 +124,12 @@ export default function TabProduct() {
 
                 {activeTab === 4 && (
                     <div className='grid grid-cols-12 gap-2'>
-                        <div className=' col-span-12 md:col-span-5 md:pl-6'>
-                        <Fade duration={3000}>       
-                            <img src={why?.data.imagem_item_quatro.url as string} alt={why?.data.imagem_item_quatro.alt as string} className='h-full w-full object-cover' />
-                        </Fade>                        </div>
+                        <div className=' col-span-12 md:col-span-5 relative'>
+                            <Fade duration={3000} className='w-full object-cover bg-pink-600 h-[300px]'>       
+                                <img src={why?.data.imagem_item_quatro.url as string} alt={why?.data.imagem_item_quatro.alt as string} className='h-[300px] object-cover w-full border-r border-white' />
+                            </Fade>   
+                            <span className="absolute bottom-0 h-[300px] w-full bg-gradient-to-l from-white to-white/5"></span>                 
+                        </div>
                         <div className=' col-span-12 md:col-span-7 md:pr-10 flex items-center'>
                             <ContentRichText data={why?.data.descricao_item_quatro} />
                         </div>

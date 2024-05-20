@@ -1,24 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 import React from 'react'
-import { client } from '@/services/prismicClient'
-import useSWR from 'swr'
 import { Container } from '../Partials/Container'
 import ContentRichText from '../Prismic/ContentRichText'
 import { Button } from '../Buttons/Button'
 import Icon from '../Adapters/Icon'
 import { Fade } from "react-awesome-reveal";
+import { ContatosERedesSociaisDocument, QuemSomosDocument} from '../../../prismicio-types'
 
 
-export default function SectionQuemSomos() {
-    const { data: about } = useSWR('getQuemSomos', () =>
-        client.getSingle('quem_somos')
-    )
-    const { data: contact } = useSWR('getContatosUm', () =>
-        client.getSingle('contatos_e_redes_sociais')
-    )
+export default function SectionQuemSomos({about, contact}: {about: QuemSomosDocument, contact: ContatosERedesSociaisDocument}) {
+    
+   
     return (
-        <div className='pt-12 md:pt-0 pb-20 md:pb-36 bg-brand-gray-100 relative'>
+        <div className='pt-12 md:pt-0 pb-20 md:pb-36 lg:pb-56 bg-brand-gray-100 relative'>
             <Container>
                 <div className='grid grid-cols-12 gap-4'>
                     <div className=' col-span-12 md:col-span-6 p-4'>

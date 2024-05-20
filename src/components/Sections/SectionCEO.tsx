@@ -3,16 +3,13 @@
 import React from 'react'
 import { Container } from '../Partials/Container'
 import ContentRichTextCEO from '../Prismic/ContentRichTextCEO'
-import { client } from '@/services/prismicClient'
-import useSWR from 'swr'
 import { Fade } from "react-awesome-reveal";
+import { SobreACeoDocument } from '../../../prismicio-types'
 
 
 
-export default function SectionCEO() {
-  const { data: ceo } = useSWR('getSobreCEO', () =>
-    client.getSingle('sobre_a_ceo')
-  )
+export default function SectionCEO({ceo}: {ceo: SobreACeoDocument}) {
+  
   return (
     <div className='pb-32 md:pb-48 pt-20 bg-brand-purple-550 relative'>
       <Container>
